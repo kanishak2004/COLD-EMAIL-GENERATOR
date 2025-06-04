@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e3fdfd, #fef9f9);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  transition: background 0.3s, color 0.3s;
+  color: #222;
+}
+
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  max-width: 720px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, background 0.3s, color 0.3s;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.logo-section .logo {
+  width: 60px;
+  margin-bottom: 8px;
+}
+
+.logo-section h1 {
+  font-size: 2rem;
+  color: #00796b;
+}
+
+#darkModeToggle {
+  position: absolute;
+  top: -32px;
+  right: -325px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: inherit;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+#darkModeToggle:hover {
+  color: #004d40;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+  font-size: 16px;
+  color: #222;
+  background: #fff;
+}
+
+body.dark input,
+body.dark select {
+  background: #333;
+  border: 1px solid #555;
+  color: #f0f0f0;
+}
+
+input:focus,
+select:focus {
+  border-color: #00796b;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 121, 107, 0.3);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  background: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #004d40;
+  transform: scale(1.03);
+}
+
+#result {
+  margin-top: 30px;
+  background: #f0fafa;
+  padding: 20px;
+  border-left: 6px solid #00796b;
+  border-radius: 8px;
+  animation: fadeIn 0.5s ease-in-out;
+  color: #222;
+}
+
+body.dark #result {
+  background: #292929;
+  color: #f0f0f0;
+  border-left-color: #00bfa5;
+}
+
+#result.hidden {
+  display: none;
+}
+
+#emailOutput {
+  white-space: pre-wrap;
+  margin-bottom: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

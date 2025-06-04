@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cold Email Generator</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="logo-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="Email Icon" class="logo" />
+      <h1>Cold Email Generator</h1>
+      <button id="darkModeToggle" title="Toggle Dark Mode">
+        <span class="material-icons">dark_mode</span>
+      </button>
+    </div>
+
+    <form id="emailForm">
+      <label><span class="material-icons">person</span> Recipient Name:</label>
+      <input type="text" id="name" required />
+
+      <label><span class="material-icons">business</span> Company Name:</label>
+      <input type="text" id="company" required />
+
+      <label><span class="material-icons">account_circle</span> Your Name:</label>
+      <input type="text" id="yourName" required />
+
+      <label><span class="material-icons">work</span> Your Position:</label>
+      <input type="text" id="position" required />
+
+      <label><span class="material-icons">email</span> Choose Template:</label>
+      <select id="template">
+        <option value="professional">Professional</option>
+        <option value="friendly">Friendly</option>
+        <option value="direct">Direct</option>
+        <option value="followup">Follow-Up</option>
+        <option value="valuepitch">Value Pitch</option>
+      </select>
+
+      <button type="submit">
+        <span class="material-icons">auto_fix_high</span> Generate Email
+      </button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>
+        <span class="material-icons">email</span> Generated Email:
+      </h2>
+      <pre id="emailOutput"></pre>
+      <div class="actions">
+        <button id="copyBtn">
+          <span class="material-icons">content_copy</span> Copy
+        </button>
+        <button id="downloadBtn">
+          <span class="material-icons">download</span> Download
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
