@@ -18,4 +18,21 @@ A beautiful and responsive cold email generator built using **HTML**, **CSS**, a
 <img width="1470" alt="Image" src="https://github.com/user-attachments/assets/12ea2c64-b22d-4b71-9d41-25d6f64c309f" />
 <img width="1470" alt="Image" src="https://github.com/user-attachments/assets/886c6b76-8e6b-4a0c-b83f-942e9404663a" />
 
+🔧 Technologies Used
+HTML5 & CSS3
 
+Vanilla JavaScript (ES6+)
+
+Google Fonts & Material Icons
+
+Responsive Design Principles
+
+
+💡 Future Improvements
+Add email preview in Gmail style card
+
+Save recent emails in local storage
+
+Add backend to email directly from browser
+
+Export as PDF
